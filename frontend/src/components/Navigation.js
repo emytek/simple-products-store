@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useRef, useState } from "react";
 import { Navbar, Button, Nav, NavDropdown, Container } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+import "./Navigation.css";
 
 function Navigation() {
   return (
+    <div>
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <LinkContainer to='/'>
+          <Navbar.Brand href="#home">my Store</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -26,7 +31,8 @@ function Navigation() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
+    </div>
+  )
 }
 
 export default Navigation
