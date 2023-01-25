@@ -1,21 +1,21 @@
-// import axios from "../axios";
+import axios from "../axios";
 import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import categories from "../categories";
 import "./Home.css";
-// import { useDispatch, useSelector } from "react-redux";
-// import { updateProducts } from "../features/productSlice";
-// import ProductPreview from "../components/ProductPreview";
+import { useDispatch, useSelector } from "react-redux";
+import { updateProducts } from "../features/productSlice";
+import ProductPreview from "../components/ProductPreview";
 
 function Home() {
-    // const dispatch = useDispatch();
-    // const products = useSelector((state) => state.products);
-    // const lastProducts = products.slice(0, 8);
-    // useEffect(() => {
-    //     axios.get("/products").then(({ data }) => dispatch(updateProducts(data)));
-    // }, []);
+    const dispatch = useDispatch();
+    const products = useSelector((state) => state.products);
+    const lastProducts = products.slice(0, 8);
+    useEffect(() => {
+        axios.get("/products").then(({ data }) => dispatch(updateProducts(data)));
+    }, []);
     return (
         <div className="show-col">
             <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1653947013/yqajnhqf7usk56zkwqi5.png" className="home-banner" />
@@ -23,9 +23,9 @@ function Home() {
                 <h2>Last products</h2>
                 {/* last products here */}
                 <div className="d-flex justify-content-center flex-wrap">
-                    {/* {lastProducts.map((product) => (
-                        // <ProductPreview {...product} />
-                    ))} */}
+                    {lastProducts.map((product) => (
+                        <ProductPreview {...product} />
+                    ))}
                 </div>
                 <div>
                     <Link to="/category/all" style={{ textAlign: "right", display: "block", textDecoration: "none" }}>
