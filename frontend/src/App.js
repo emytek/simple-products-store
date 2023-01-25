@@ -10,9 +10,13 @@ import ProductPage from './pages/ProductPage';
 import CategoryPage from './pages/CategoryPage';
 import CartPage from './pages/CartPage';
 import OrdersPage from './pages/OrderPage';
+import AdminDashboard from './pages/AdminDashboard';
+import { useEffect } from 'react';
 
 function App() {
   const user = useSelector((state) => state.user);
+  console.log(user)
+
 
   return (
     <div>
@@ -34,6 +38,12 @@ function App() {
                 <Route path="/orders" element={<OrdersPage />} />
             </>
           )} */}
+          {user && user.isAdmin && (
+            <>
+                <Route path="/admin" element={<AdminDashboard />} />
+                {/* <Route path="/product/:id/edit" element={<EditProductPage />} /> */}
+            </>
+          )}
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
          <Route path="/new-product" element={<NewProduct />} />

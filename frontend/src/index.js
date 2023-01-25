@@ -4,17 +4,18 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import store from "./store";
-// import { PersistGate } from 'redux-persist/lib/integration/react';
-// import persistStore from 'redux-persist/es/persistStore';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import persistStore from 'redux-persist/es/persistStore';
 
-// const persistedStore = persistStore
+const persistedStore = persistStore
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    {/* <PersistGate loading={<div>Loading...</div>} persistor={persistedStore}></PersistGate> */}
+    {/* <PersistGate loading={null} persistor={store.persistor}> */}
       <App />
-  </Provider>
+   {/* </PersistGate>, */}
+ </Provider>
 );
 
 

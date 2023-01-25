@@ -5,8 +5,6 @@ import { Alert, Col, Container, Row, Table } from "react-bootstrap";
 import { useSelector } from "react-redux";
 // import CheckoutForm from "../components/CheckoutForm";
 import { useIncreaseCartProductMutation, useDecreaseCartProductMutation, useRemoveFromCartMutation } from "../services/appApi";
-import "./CartPage.css";
-
 // const stripePromise = loadStripe("your_stripe_publishable_key");
 
 function CartPage() {

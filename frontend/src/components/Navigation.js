@@ -29,6 +29,11 @@ function Navigation() {
                                 <Nav.Link>Login</Nav.Link>
                             </LinkContainer>
                         )}
+                      {user && user.isAdmin && (
+                            <LinkContainer to="/admin">
+                                <Nav.Link>Admin Dashboard</Nav.Link>
+                            </LinkContainer>
+                        )}
                         {user && !user.isAdmin && (
                             <LinkContainer to="/cart">
                                 <Nav.Link>
