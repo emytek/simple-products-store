@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import NewProduct from './pages/NewProduct';
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -22,6 +23,8 @@ function App() {
               <Route path="/signup" element={<Signup />} />
             </>
          )}
+
+         <Route path="/new-product" element={<NewProduct />} />
         </Routes>
       </BrowserRouter>
     </div>
