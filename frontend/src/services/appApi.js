@@ -86,6 +86,7 @@ export const {
     useIncreaseCartProductMutation,
     useDecreaseCartProductMutation,
     useDeleteProductMutation,
+    useUpdateProductMutation
 } = appApi;
 
 export default appApi;

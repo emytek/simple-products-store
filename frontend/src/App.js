@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
@@ -11,7 +12,8 @@ import CategoryPage from './pages/CategoryPage';
 import CartPage from './pages/CartPage';
 import OrdersPage from './pages/OrderPage';
 import AdminDashboard from './pages/AdminDashboard';
-import { useEffect } from 'react';
+import EditProductPage from './pages/EditProductPage';
+
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -41,7 +43,7 @@ function App() {
           {user && user.isAdmin && (
             <>
                 <Route path="/admin" element={<AdminDashboard />} />
-                {/* <Route path="/product/:id/edit" element={<EditProductPage />} /> */}
+                <Route path="/product/:id/edit" element={<EditProductPage />} />
             </>
           )}
           <Route path="/product/:id" element={<ProductPage />} />

@@ -27,27 +27,6 @@ function DashboardProducts() {
         if (window.confirm("Are you sure?")) deletProduct({ product_id: id, user_id: user._id });
     }
 
-    // function TableRow({ pictures, _id, name, price }) {
-    //     return (
-    //         <tr>
-    //             <td>
-    //                 <img src={pictures[0].url} className="dashboard-product-preview" />
-    //             </td>
-    //             <td>{_id}</td>
-    //             <td>{name}</td>
-    //             <td>{price}</td>
-    //             <td>
-    //                 <Button >
-    //                     Delete
-    //                 </Button>
-    //                 <Link to={`/product/${_id}/edit`} className="btn btn-warning">
-    //                     Edit
-    //                 </Link>
-    //             </td>
-    //         </tr>
-    //     );
-    // }
-
     return (
         <Table striped bordered hover responsive>
             <thead>
@@ -69,7 +48,7 @@ function DashboardProducts() {
                       <td>{product.name}</td>
                       <td>{product.price}</td>
                         <td>
-                         <Button onClick={() => handleDeleteProduct(product._id, user._id)} disabled={isLoading}>
+                         <Button onClick={() => handleDeleteProduct(product._id, user._id)} disabled={isLoading} className="btn btn-danger">
                             Delete  
                          </Button>
                          <Link to={`/product/${product._id}/edit`} className="btn btn-warning">
