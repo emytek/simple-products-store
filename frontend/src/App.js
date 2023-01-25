@@ -8,6 +8,8 @@ import Signup from './pages/Signup';
 import NewProduct from './pages/NewProduct';
 import ProductPage from './pages/ProductPage';
 import CategoryPage from './pages/CategoryPage';
+import CartPage from './pages/CartPage';
+import OrdersPage from './pages/OrderPage';
 
 function App() {
   const user = useSelector((state) => state.user);
