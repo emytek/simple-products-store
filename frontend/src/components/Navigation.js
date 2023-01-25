@@ -15,7 +15,7 @@ function Navigation() {
 
   return (
     <div>
-            <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg">
             <Container>
                 <LinkContainer to="/">
                     <Navbar.Brand>my Store</Navbar.Brand>
