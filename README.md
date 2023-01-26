@@ -68,4 +68,4 @@ is rendered in the dashboard product strictly for the admin.
 - Creating and improving the cart and orders pages
 - Adding a payment option such as stripe
 - Pagination
-- Advanced filtering and login
+- Advanced filtering, searching and sorting
