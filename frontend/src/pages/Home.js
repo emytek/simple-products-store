@@ -12,8 +12,9 @@ import ProductPreview from "../components/ProductPreview";
 function Home() {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
-    const lastProducts = products.slice(0, 8);
-    
+    const lastProducts = products
+    console.log(products)
+
     useEffect(() => {
         axios.get("/products").then(({ data }) => dispatch(updateProducts(data)));
     }, []);
