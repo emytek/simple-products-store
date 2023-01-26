@@ -2,68 +2,6 @@ const router = require('express').Router();
 const User = require('../models/User');
 // const Order = require('../models/Order');
 
-// signup user
-// router.post('/signup', async(req, res)=> {
-//   const {name, email, password} = req.body;
-
-//   try {
-//     const user = await User.create({name, email, password});
-//     res.send({
-//       success: true,
-//       data: user,
-//     });
-//     res.status(200);
-//     } catch (e) {
-//       if(e.code === 11000) return res.status(400).send('Email already exists');
-//     res.send({
-//       success: false,
-//       status: res.status(400),
-//       message: e.message
-//     });
-//     res.status(400);
-//     }
-// })
-
-// // login user
-// router.post('/login', async(req, res) => {
-//   const {email, password} = req.body;
-//   try {
-//     const user = await User.findByCredentials(email, password);
-//     res.send({
-//       success: true,
-//       data: user,
-//     });
-//     res.status(201);
-//     } catch (e) {
-//       if(e.code === 11000) return res.status(400).send('Email already exists');
-//     res.send({
-//       success: false,
-//       status: res.status(400),
-//       message: e.message
-//     });
-//     res.status(400);
-//     }
-// })
-
-// // get users;
-// router.get('/', async(req, res)=> {
-//   try {
-//     const users = await User.find({ isAdmin: false });
-//     res.send({
-//       success: true,
-//       data: users,
-//     });
-//     res.status(200);
-//     } catch (e) {
-//     res.send({
-//       success: false,
-//       status: res.status(400),
-//       message: e.message
-//     });
-//     res.status(400);
-//     }
-// })
-
 // signup
 router.post('/signup', async(req, res)=> {
   const {name, email, password} = req.body;
@@ -78,7 +16,6 @@ router.post('/signup', async(req, res)=> {
 })
 
 // login
-
 router.post('/login', async(req, res) => {
   const {email, password} = req.body;
   try {
