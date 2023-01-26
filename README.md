@@ -45,7 +45,8 @@ To provide data across all components and pages of our application, redux toolki
 was done to provide update to the server and the redux thunk was implemented to handle asynchronous requests effectively.
 ### Creating products
 This feature can be implemented both on the frontend and backend of our application. On the backend, the neccessary models and controls were created and connected to the database.
-### Handling product requests on the server. Products can be created on the clients slide through the new products page, basic details of each product and pictures can be uploaded
+### Handling product requests 
+Products can be created on the clients slide through the new products page, basic details of each product and pictures can be uploaded
 through the cloudinary widget. This feature helps us upload images from websites and locally. After this, the products are displayed on the homepage.
 ![App Screenshot](images/4.png)
 This was done through basic http requests to handle CRUD operations for the products. To create/post product, to get all products or a single product / get similar products / get 
