@@ -4,8 +4,9 @@ A fullstack project: my Store app with RESTful service
 - aesthetic UI interfaces and components;
 - scalable API;
 ### Hosting:
-- Link to Project task: store-frontend-ten.vercel.app
-- API endpoints: simple-product-store.fly.dev
+- Link to Project task: https://store-frontend-ten.vercel.app
+- API endpoints users: https://simple-product-store.fly.dev/users
+- API endpoints products: https://simple-product-store.fly.dev/products
 ### Tests:
 - API routes were tested to suit various use cases
 ### Tools used:
